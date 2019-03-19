@@ -39,7 +39,7 @@ class Reader : public Nan::ObjectWrap {
   explicit Reader();
   ~Reader();
 
-  // 框架要求定义的方法
+  //
   static void Init(v8::Local<v8::Object> exports);
   static void New(const Nan::FunctionCallbackInfo<v8::Value>& info);
   static Nan::Persistent<v8::Function> constructor;
@@ -50,15 +50,15 @@ class Reader : public Nan::ObjectWrap {
    * @param info [description]
    */
   static void Initialize(
-      const Nan::FunctionCallbackInfo<v8::Value>& info);  // 初始化
+      const Nan::FunctionCallbackInfo<v8::Value>& info);
   static void GetVector(
-      const Nan::FunctionCallbackInfo<v8::Value>& info);  // 获取词向量
+      const Nan::FunctionCallbackInfo<v8::Value>& info);
   static void FindClosestWords(
-      const Nan::FunctionCallbackInfo<v8::Value>& info); // 获取最近临词汇
+      const Nan::FunctionCallbackInfo<v8::Value>& info);
   static void GetEmbeddingDim(
-      const Nan::FunctionCallbackInfo<v8::Value>& info); // 获取词向量维度
+      const Nan::FunctionCallbackInfo<v8::Value>& info);
   static void GetVocabSize(
-      const Nan::FunctionCallbackInfo<v8::Value>& info); // 获取词表大小
+      const Nan::FunctionCallbackInfo<v8::Value>& info);
 };
 }  // word2vec
 }  // synonyms
