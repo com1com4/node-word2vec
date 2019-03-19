@@ -150,9 +150,9 @@ void Reader::Initialize(const Nan::FunctionCallbackInfo<v8::Value>& info) {
   std::cout << "reader.cc << init done." << endl;
 
   v8::Local<v8::Function> cb = info[1].As<v8::Function>();
-  const unsigned argc = 1;
-  v8::Local<v8::Value> argv[argc] = {};
-  Nan::MakeCallback(Nan::GetCurrentContext()->Global(), cb, argc, argv);
+  const unsigned argc = 0;
+  //v8::Local<v8::Value> argv[argc] = {};
+  Nan::MakeCallback(Nan::GetCurrentContext()->Global(), cb, argc, NULL);
 };
 
 void Reader::GetEmbeddingDim(const Nan::FunctionCallbackInfo<v8::Value>& info) {
